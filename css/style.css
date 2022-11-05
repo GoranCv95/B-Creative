@@ -191,24 +191,22 @@ body{
     flex-direction: column;
 }
 
+
 .prvi{
     height: 70%;
-    background-color: #db5315;
+    
 }
 
 .drugi{
     height: 30%;
-    background-color: #f6ce4a;
 }
 
 .treci{
     height: 40%;
-    background-color: aliceblue;
 }
 
 .cetvrti{
     height: 60%;
-    background-color: #333;
 }
 
 .images-right{
@@ -219,7 +217,6 @@ body{
 
 .images-right-top{
     height: 40%;
-    background-color: #db5315;
 }
 
 .images-right-bottom{
@@ -235,7 +232,6 @@ body{
 
 .images-right-bottom-left{
     width: 100%;
-    background-color: coral;
 }
 
 .sesti{
@@ -252,13 +248,11 @@ body{
 .sedam{
     height: 50%;
     width: 100%;
-    background-color: crimson;
 }
 
 .osam{
     height: 50%;
     width: 100%;
-    background-color: rgb(20, 207, 220);
 }
 
 /******************* COUNTER ****************/
@@ -293,4 +287,104 @@ body{
     font-size: 1.8rem;
     font-weight: 300;
     text-transform: uppercase;
+}
+
+/**********************************/
+
+
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5rem 0 6rem;
+}
+
+.blog-header{
+    margin: 3rem 0;
+}
+
+.blog-title{
+    width: 16rem;
+    letter-spacing: 0.25rem;
+    font-size: 2.6rem;
+    padding: 0 0 3rem;
+    text-align: center;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(45deg, #ff4500, #ffff00) 1;
+}
+
+.blog-para p{
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 3.5rem;
+    padding-bottom: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-images{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blog-images .blog-image{
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.blog-date{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 8rem;
+    height: 9rem;
+    padding-top: 1.2rem;
+    line-height: 3.5rem;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #ff4500;
+}
+
+.blog-image img{
+    width: 32rem;
+    height: 28rem;
+}
+
+.blog-image .blog-desc{
+    padding-top: 2.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.blog-image .blog-logo{
+    padding: .35rem 0 2rem 0;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.blog-image a{
+    color: #ff4500;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: .5rem 0;
+
+}
+
+.blog-image a:hover{
+   cursor: pointer;
+   color: #fff;
+   background-color: #ff4500;
 }
