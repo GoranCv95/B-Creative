@@ -66,6 +66,10 @@ body {
   height: 3.6rem;
 }
 
+.search:hover{
+  filter: invert(40%) sepia(77%) saturate(2509%) hue-rotate(355deg) brightness(89%) contrast(92%);
+}
+
 .banner {
   width: 100%;
   height: 100%;
@@ -220,7 +224,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   margin: 4rem 0 1.6rem;
 }
 
@@ -233,8 +236,12 @@ body {
 }
 
 .about-icon:hover .helper{
-    background: linear-gradient(to right bottom, #ff4500, #ffff00);
+    background: #db5315;
     border: none;
+}
+
+.about-icon:hover .helper img{
+  filter: invert(100%) sepia(10%) saturate(7495%) hue-rotate(274deg) brightness(105%) contrast(98%);
 }
 
 .about-icon:hover .heading-secondary{
@@ -260,7 +267,6 @@ body {
     width: 10rem;
     height: 10rem;
 }
-
 
 .heading-secondary {
   margin: 2rem 0 0;
@@ -545,26 +551,45 @@ body {
 }
 
 .team-image img {
+  display: block;
   width: 32rem;
   height: 38rem;
 }
 
-.centered {
+.overlay{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 1rem;
+  left: 1rem;
   background-color: #db5315;
+  opacity: .75;
+  overflow: hidden;
   width: 95%;
-  height: 95%;
-  opacity: 0.7;
+  height: 0;
+  transition: .5s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 2rem;
+  justify-content: center;
 }
+
+.overlay-nav{
+  display: flex;
+  gap: 2rem;
+  margin: 0 0 2rem;
+}
+
+.overlay-small-line{
+  height: 8px;
+  width: 15%;
+  background-color: #fff;
+  border: none;
+  opacity: 999;
+}
+ 
+.team-image:hover .overlay{
+  height: 95%;
+}
+
 
 /********************/
 /* CONTACT */
@@ -595,6 +620,24 @@ body {
   width: 60rem;
   padding: 1rem;
   border: 2px solid #333;
+}
+
+
+.contact-inputs input::-webkit-input-placeholder,
+.contact-inputs textarea::-webkit-input-placeholder {
+  color: #000;
+}
+
+.input-group{
+  position: relative;
+}
+.input-group::after{
+  content: '*';
+  position: absolute;
+  font-size: 1.5rem;
+  top: 1.1rem;
+  left: 7.6rem;
+  color: #db5315
 }
 
 .contact-inputs textarea {
@@ -754,6 +797,10 @@ body {
   height: 4rem;
 }
 
+.footer-three input[type="email"]::-webkit-input-placeholder{
+  color: #fff;
+}
+
 .footer-three input[type="submit"] {
   width: 50%;
   height: 3rem;
@@ -786,6 +833,11 @@ body {
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  position: relative;
   overflow: hidden;
+}
+
+
+.social-icon:hover{
+  cursor: pointer;
+  filter: invert(38%) sepia(40%) saturate(6635%) hue-rotate(360deg) brightness(100%) contrast(108%);
 }

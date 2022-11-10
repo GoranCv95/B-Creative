@@ -17,11 +17,15 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queires.css" />
     <title>B-Creative - Practice design</title>
-    <script defer src="https://kit.fontawesome.com/c70061d114.js" crossorigin="anonymous"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/c70061d114.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <img
         class="logo"
         src="img/logo b-creative-01.svg"
@@ -263,32 +267,19 @@
           <div class="team-images">
             <div class="team-image">
               <img src="img/Ime-Prezime-1-350x420px.jpg" alt="person1" />
-              <div class="centered">
-                <div class="center-nav">
-                  <ul>
-                    <ion-icon
-                      class="social-icon"
-                      name="logo-facebook"
-                    ></ion-icon>
-                    <ion-icon
-                      class="social-icon"
-                      name="logo-twitter"
-                    ></ion-icon>
-                    <ion-icon
-                      class="social-icon"
-                      name="logo-instagram"
-                    ></ion-icon>
-                    <ion-icon
-                      class="social-icon"
-                      name="logo-linkedin"
-                    ></ion-icon>
+              <div class="overlay">
+                  <ul class="overlay-nav">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-linkedin"></ion-icon>
                   </ul>
-                </div>
-                <h2 class="center-title">IME PREZIME 1</h2>
-                <h3 class="center-title-small">CEO</h3>
-                <hr class="small-line" />
-                <p class="center-text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, obcaecati.
+                <h2 class="overlay-title">IME PREZIME 1</h2>
+                <h3 class="overlay-title-small">CEO</h3>
+                <hr class="overlay-small-line" />
+                <p class="overlay-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Inventore, obcaecati.
                 </p>
               </div>
             </div>
@@ -310,18 +301,22 @@
           </div>
           <div class="contact-info">
             <div class="contact-inputs">
-              <input
-                class="input"
-                type="text"
-                placeholder="VAŠE IME*"
-                required
-              />
-              <input
-                class="input"
-                type="email"
-                placeholder="VAŠ EMAIL*"
-                required
-              />
+              <span class="input-group">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="VAŠE IME"
+                  required
+                />
+              </span>
+              <span class="input-group">
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="VAŠ MAIL"
+                  required
+                />
+              </span>
               <textarea
                 name="message"
                 cols="30"
@@ -392,11 +387,13 @@
             modi. Vel cupiditate eius, ad neque temporibus fugiat similique
             molestiae minima, error ipsa earum eveniet assumenda.
           </p>
-          <img
-            class="footer-logo"
-            src="img/logo b-creative-02.svg"
-            alt="logo"
-          />
+          <a href="#header">
+            <img
+              class="footer-logo"
+              src="img/logo b-creative-02.svg"
+              alt="logo"
+            />
+          </a>
         </div>
         <div class="footer-two">
           <ul class="footer-list">
@@ -422,10 +419,10 @@
       <div class="copyright-container">
         <p class="copyright-text">Copyright LANACO | All Rights Reserved</p>
         <div class="copyright-icons">
-          <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
-          <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
-          <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
-          <ion-icon class="social-icon" name="logo-linkedin"></ion-icon>
+          <i class="fa-brands fa-facebook-f social-icon"></i>
+          <i class="fa-brands fa-twitter social-icon"></i>
+          <i class="fa-brands fa-instagram social-icon"></i>
+          <i class="fa-brands fa-linkedin-in social-icon"></i>
         </div>
       </div>
     </footer>
