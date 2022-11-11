@@ -2,7 +2,6 @@
 
 // Counter
 
-
 let valueDisplays = document.querySelectorAll(".counter-number");
 let interval = 3000;
 
@@ -19,3 +18,18 @@ valueDisplays.forEach((valueDisplay) => {
     }
   }, duration);
 });
+
+// Make mobile navigation work
+
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
+
+document.querySelectorAll(".main-nav-link").forEach((n) =>
+  n.addEventListener("click", () => {
+    headerEl.classList.remove("nav-open");
+  })
+);

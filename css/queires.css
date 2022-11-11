@@ -1,4 +1,4 @@
-@media (max-width: 59em) {
+@media (max-width: 34em) {
   html {
     /* 8px / 16px = 0.5 = 50% */
     font-size: 50%;
@@ -8,24 +8,86 @@
   /* HERO */
   /********************/
 
+.header{
+  justify-content: space-between;
+  padding: 0 9.6rem 0 7rem;
+}
+
   .hero-container {
-    gap: 2.3rem;
+    gap: 5rem;
+  }
+
+  .hero-img{
+    width: 140rem;
   }
 
   .hero-title-two {
-    font-size: 2rem;
+    font-size: 2.6rem;
     letter-spacing: 0.2rem;
   }
 
   .hero-title-one {
-    font-size: 4.8rem;
+    font-size: 5.8rem;
     letter-spacing: 0.2rem;
   }
 
   .btn:link,
   .btn:visited {
-    font-size: 1rem;
-    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    padding: 1.4rem 2.4rem;
+  }
+
+  /* MOBILE NAVIGATION */
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav{
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"]{
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"]{
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
   }
 
   /********************/
@@ -74,7 +136,7 @@
   /********************/
 
   .section-portfolio {
-    margin-bottom: 290rem;
+    margin-bottom: 400rem;
   }
 
   .btns {
@@ -90,6 +152,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    margin-bottom: 33rem;
   }
 
   .images-left {
@@ -141,7 +204,6 @@
 
   .team-image {
     margin: 2rem;
-
   }
 
   /********************/
@@ -154,6 +216,10 @@
 
   .contact-inputs input {
     width: 40rem;
+  }
+
+  .input-group::after{
+    left: 9.2rem;
   }
 
   .contact-inputs textarea {
@@ -180,17 +246,17 @@
   .contact-data-info-text {
     padding-bottom: 2rem;
   }
-
   /********************/
   /* FOOTER */
   /********************/
 
-  .footer {
-    flex-direction: column;
-  }
-
   .footer-container {
-    flex-direction: column;
+    padding: 10rem 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7rem;
+    justify-content: space-between;
   }
 
   .footer-one {
@@ -202,49 +268,28 @@
   }
 
   .footer-three {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .footer-title {
     width: 100%;
   }
 
   .footer-three input[type="email"] {
-    margin: 2rem 0;
-    padding: 2rem 1rem;
-    color: #fff;
-    background-color: #333;
-    border: 2px solid #fff;
-    height: 4rem;
-  }
-
-  .footer-three input[type="submit"] {
-    width: 50%;
-    height: 3rem;
-  }
-
-  .footer-three input[type="submit"]:hover {
-    cursor: pointer;
-    background-color: #db5315;
-    color: #fff;
-    border: 1px solid #db5315;
-  }
-  .footer-three input[type="submit"]:active {
-    transform: translateY(2px);
+    margin: 2rem 0 3rem;
   }
 
   .copyright-container {
+    width: 100%;
+    height: 10rem;
+    padding: 1rem 5rem;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 
   .copyright-icons {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
-    position: relative;
+    gap: 2rem;
     overflow: hidden;
   }
 }
