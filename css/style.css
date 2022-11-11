@@ -352,87 +352,40 @@ body {
   transform: translateY(2px);
 }
 
-.images {
-  width: 100%;
-  height: 100vh;
+
+.img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.grid-wrapper > div{
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.images-left {
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-}
-
-.images-left-1,
-.images-left-2 {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
-.prvi {
-  height: 70%;
-}
-
-.drugi {
-  height: 30%;
-}
-
-.treci {
-  height: 40%;
-}
-
-.cetvrti {
-  height: 60%;
-}
-
-.images-right {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.images-right-top {
-  height: 40%;
-}
-
-.images-right-bottom {
-  display: flex;
-  flex-direction: row;
-  height: 60%;
-}
-
-.peti {
+.grid-wrapper > div > .img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
-.images-right-bottom-left {
-  width: 100%;
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.sesti {
-  height: 100%;
-  width: 100%;
+.grid-wrapper .wide {
+  grid-column: span 2;
 }
 
-.images-right-bottom-right {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+.grid-wrapper .tall {
+  grid-row: span 2;
+} 
 
-.sedam {
-  height: 50%;
-  width: 100%;
-}
 
-.osam {
-  height: 50%;
-  width: 100%;
-}
 
 /********************/
 /* COUNTER */
