@@ -410,6 +410,19 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid-2-col {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-col {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
 .grid-wrapper .wide {
   grid-column: span 2;
 }
