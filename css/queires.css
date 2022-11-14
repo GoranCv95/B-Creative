@@ -201,6 +201,7 @@
   .contact-inputs .submit {
     width: 12rem;
     padding: 1rem;
+
   }
 
   .contact-data {
@@ -255,7 +256,14 @@
 
   .footer-three input[type="email"] {
     margin: 2rem 0 3rem;
+    padding: 2rem;
+    width: 36rem;
   }
+
+  .footer-three input[type="submit"]{
+    height: 4rem;
+  }
+
 
   .copyright-container {
     width: 100%;
@@ -268,9 +276,14 @@
     gap: 1rem;
   }
 
+  .copyright-text{
+    font-size: 1.5rem;
+  }
+
   .copyright-icons {
     display: flex;
     flex-direction: row;
+    font-size: 1.5rem;
     gap: 2rem;
     overflow: hidden;
   }
