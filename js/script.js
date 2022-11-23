@@ -2,22 +2,37 @@
 
 // Counter
 
+let sectionCounter = document.querySelector(".section-counter");
+
 let valueDisplays = document.querySelectorAll(".counter-number");
-let interval = 3000;
 
-valueDisplays.forEach((valueDisplay) => {
-  let startValue = 0;
-  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+let CounterObserver = new IntersectionObserver(
+  (entries, observer) => {
+    let [entry] = entries;
+    if (!entry.isIntersecting) return;
 
-  let duration = Math.floor(interval / endValue);
-  let counter = setInterval(function () {
-    startValue += 1;
-    valueDisplay.textContent = startValue;
-    if (startValue === endValue) {
-      clearInterval(counter);
-    }
-  }, duration);
-});
+    let interval = 200;
+
+    valueDisplays.forEach((valueDisplay) => {
+      function updateCoutner() {
+        const targetNumber = +parseInt(valueDisplay.getAttribute("data-val"));
+        const initialNumber = +valueDisplay.innerText;
+        const incPerCount = targetNumber / interval;
+        if (initialNumber < targetNumber) {
+          valueDisplay.innerText = Math.ceil(initialNumber + incPerCount);
+          setTimeout(updateCoutner, 40);
+        }
+      }
+      updateCoutner();
+    });
+  },
+  {
+    root: null,
+    threshold: 0.4,
+  }
+);
+
+CounterObserver.observe(sectionCounter);
 
 // Make mobile navigation work
 

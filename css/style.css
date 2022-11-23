@@ -103,7 +103,7 @@ body {
 }
 
 .hero {
-  max-width: 154rem;
+  /* max-width: 154rem; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,7 +364,7 @@ body {
   right: 5%;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
-  background: #db5315;
+  background: linear-gradient(to right top, #ff4500, #ffc400);
   cursor: pointer;
   height: 95%;
   display: flex;
@@ -569,14 +569,36 @@ body {
   margin: 0 0 2rem;
 }
 
+.overlay-nav-icon{
+  font-size: 2rem;
+}
+
+.overlay-nav-icon:hover{
+  color: #000;
+}
+
+.overlay-title{
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+}
+
+.overlay-title-small{
+  color: #000;
+  font-size: .5rem;
+}
+
 .overlay-small-line{
-  height: 8px;
+  height: 4px;
   width: 15%;
   background-color: #fff;
   border: none;
   opacity: 999;
 }
- 
+
+.overlay-text{
+  text-align: center;
+}
+
 .team-image:hover .overlay{
   height: 95%;
 }
@@ -809,7 +831,7 @@ body {
 }
 
 .copyright-container {
-  width: 90%;
+  width: 100%;
   margin: auto;
   background-color: #000;
   color: #fff;
